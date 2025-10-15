@@ -6,7 +6,7 @@ import stripe
 class Server(Resource):
     @token_required
     def post(self):
-        stripe.api_key = "REDACTED51QIkCnRsAArso1zvXqKonfxRAQT6ktdsC1ZTPJRkU5KbyIFjArCwukimEaYmoPZC3uV45XXrVqQjutOitoz68kv200UFnbPpW6"
+        stripe.api_key = "dummy api key start with sk"
         items = [{"unit_amount" : "20000","product_id":45 },
                 {"unit_amount" : "3000","product_id":46 },
                 {"unit_amount" : "780","product_id":47 },

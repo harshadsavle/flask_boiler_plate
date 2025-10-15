@@ -40,7 +40,7 @@ def get_discounted_price(coupon,price):
 
 
 def initiate_stripe_payment(purchase_list):
-    stripe.api_key = "REDACTED51QIkCnRsAArso1zvXqKonfxRAQT6ktdsC1ZTPJRkU5KbyIFjArCwukimEaYmoPZC3uV45XXrVqQjutOitoz68kv200UFnbPpW6"
+    stripe.api_key = "test api key"
     
     items = [
         {"unit_amount": 20000, "product_name": "Mobile"},
