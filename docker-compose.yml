@@ -1,0 +1,32 @@
+version: '3.12'
+
+services:
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  fastapi:
+    build: .
+    container_name: fastapi
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    environment:
+      - APP_ENV=development
+      - DEBUG=true
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
+  celery:
+    build: .
+    container_name: celery_worker
+    command: celery -A celery_app.celery worker --loglevel=info
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379

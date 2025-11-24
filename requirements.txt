@@ -1,22 +1,23 @@
-flasgger==0.9.7.1
-pip==19.3.1
-Flask==3.0.3
-Flask-RESTful==0.3.10
-stripe==11.2.0
-SQLAlchemy==2.0.32
+# Core FastAPI
+fastapi[standard]==0.116.0
+uvicorn==0.34.3
+celery==5.3.4
+redis==5.0.1
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.13.1
+
+# Authentication
+pyjwt==2.8.0
+passlib==1.7.4
+bcrypt==4.1.2
+python-jose[cryptography]==3.3.0
+
+# Validation
+pydantic==2.5.3
+pydantic-settings==2.1.0
+email-validator==2.1.0
+
+# Testing
 requests==2.31.0
-Werkzeug==3.0.4
-marshmallow==3.22.0
-Flask-SQLAlchemy==3.0.2
-gunicorn==20.1.0
-PyJWT==2.9.0
-python-dotenv==1.0.1 
-pillow==11.0.0 
-PyAutoGUI==0.9.54
-pandas==2.1.1
-selenium==4.14.0
-wheel==0.37.1
-demjson3==3.0.6 
-setuptools==58.0.0
-anyjson==0.3.3 
-celery==5.4.0 
